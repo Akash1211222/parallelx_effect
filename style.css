@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  height: 100vh;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 15px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  z-index: -1;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+#heading {
+  font-size: 70px !important;
+  font-style: oblique;
+  color: rgb(174, 7, 235);
+}
+
+.background {
+  transform: translateZ(-40px) scale(4);
+}
+
+.foreground {
+  transform: translateZ(-20px) scale(3);
+}
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
